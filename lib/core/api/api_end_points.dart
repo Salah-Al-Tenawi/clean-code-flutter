@@ -13,5 +13,6 @@ class ApiKey {
   static const email = "email";
   static const password = "password";
 
+  static const configPassword = "configPassword";
 //
 }
