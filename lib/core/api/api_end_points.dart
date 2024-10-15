@@ -12,7 +12,6 @@ class ApiKey {
   static String error = "error";
   static const email = "email";
   static const password = "password";
-
   static const configPassword = "configPassword";
 //
 }
