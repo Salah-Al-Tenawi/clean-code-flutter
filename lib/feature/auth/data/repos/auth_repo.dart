@@ -12,12 +12,12 @@ class AuthRepoImp extends AuthRpos {
 
   AuthRepoImp(this._authRemoteDataSource, this._authLocalDataSource);
   @override
-  Future<Either<Filuar, UserModel>> login(String email, String password) async{
+  Future<Either<ErrorModel, UserModel>> login(String email, String password) async{
     try {
       final response = await _authRemoteDataSource.login(email, password);
       return right(response);
     } on ServerExpcptions catch (e) {
-      return left(e.filuar);
+      return left(e.erroe);
     }
   }
 
@@ -28,7 +28,7 @@ class AuthRepoImp extends AuthRpos {
   }
 
   @override
-  Future<Either<Filuar, UserModel>> singin(
+  Future<Either<ErrorModel, UserModel>> singin(
       String email, String password, String configPassword) {
     // TODO: implement singin
     throw UnimplementedError();

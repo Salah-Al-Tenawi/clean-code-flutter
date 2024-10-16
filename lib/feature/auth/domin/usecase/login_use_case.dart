@@ -13,7 +13,7 @@ class LoginUseCase extends UseCase<UserModel, String, String> {
   });
 
   @override
-  Future<Either<Filuar, UserModel>> call(String param, String parm2) async {
+  Future<Either<ErrorModel, UserModel>> call(String param, String parm2) async {
     return await authRpos.login(param ,parm2);
   }
 }

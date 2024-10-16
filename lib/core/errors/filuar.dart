@@ -1,13 +1,14 @@
 // ignore_for_file: public_member_api_docs, sort_constructors_first
-class Filuar {
+ class ErrorModel {
   final String message;
-  final int statusCode;
-  const Filuar({
+  final int ?statusCode;
+  const ErrorModel({
     required this.message,
-    required this.statusCode,
+     this.statusCode,
   });
 
-  factory Filuar.fromJson(Map<String, dynamic> json) {
-    return Filuar(message: json['message'], statusCode: json['status code']);
+  factory ErrorModel.fromJson(Map<String, dynamic> json) {
+    return ErrorModel(message: json['message'], statusCode: json['status code']);
   }
 }
+

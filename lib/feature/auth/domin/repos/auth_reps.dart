@@ -7,8 +7,8 @@ abstract class AuthRpos {
   // replace Userentities by UserModel  
 
   //every method is use case in clean architicture but don't to need that here
-  Future<Either< Filuar,UserModel>> login(String email, String password);
- Future<Either< Filuar,UserModel>> singin(String email, String password, String configPassword);
+  Future<Either< ErrorModel,UserModel>> login(String email, String password);
+ Future<Either< ErrorModel,UserModel>> singin(String email, String password, String configPassword);
   sendCodeOtp(String email);
 
 }
