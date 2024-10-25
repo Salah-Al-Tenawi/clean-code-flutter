@@ -4,11 +4,14 @@ import 'package:dartz/dartz.dart';
 
 abstract class AuthRpos {
   // to do edit
-  // replace Userentities by UserModel  
+  // replace Userentities by UserModel
 
   //every method is use case in clean architicture but don't to need that here
-  Future<Either< ErrorModel,UserModel>> login(String email, String password);
- Future<Either< ErrorModel,UserModel>> singin(String email, String password, String configPassword);
-  sendCodeOtp(String email);
-
+  Future<Either<ErrorModel, UserModel>> login(String email, String password);
+  Future<Either<ErrorModel, UserModel>> singin(
+      String email, String password, String configPassword);
+  Future<Either<ErrorModel, dynamic>> sendOtp(String email);
+  Future<Either<ErrorModel, dynamic>> resendOtp(String email);
+  
+  
 }

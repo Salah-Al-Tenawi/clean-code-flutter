@@ -1,5 +1,5 @@
 import 'package:cleanarchitecture/core/them/color_app.dart';
-import 'package:cleanarchitecture/core/utils/custom_text_form.dart';
+import 'package:cleanarchitecture/core/utils/widgets/custom_text_form.dart';
 import 'package:flutter/material.dart';
 
 class SinginBody extends StatelessWidget {
