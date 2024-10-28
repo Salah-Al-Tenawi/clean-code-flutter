@@ -1,0 +1,3 @@
+class AuthState extends S { 
+
+}
